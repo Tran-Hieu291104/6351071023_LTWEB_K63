@@ -1,0 +1,22 @@
+﻿@model IEnumerable<MvcBookStore.Models.SACH>
+@{
+    ViewBag.Title = "SPTheochude";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var sach in Model)
+{
+    <div class="templatemo_product_box">
+        <a href="@Url.Action("Detail", "BookStore", new { id = sach.Masach })">
+            <img alt="@sach.Tensach" src="~/Content/image/@sach.Anhbia" width="200" />
+        </a>
+        <div class="product_info">
+            <p>@sach.Tensach</p>
+            <h3>@sach.Giaban</h3>
+            <div class="buy_now_button"><a href="@Url.Action("Detail", "BookStore", new { id = sach.Masach })">Buy Now</a></div>
+            <div class="detail_button"><a href="@Url.Action("Detail", "BookStore", new { id = sach.Masach })">Detail</a></div>
+        </div>
+    </div>
+    <div class="cleaner_with_width"></div>
+}
+

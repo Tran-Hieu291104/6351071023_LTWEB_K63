@@ -1,0 +1,18 @@
+﻿@model MvcBookStore.Models.SACH
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin chi tiết sách</h2>
+<div style="display:flex">
+    <div style="margin-bottom: 10px">
+        <img src="~/Content/image/@Model.Anhbia" alt="Alternate Text" />
+    </div>
+    <div>
+        <h3 style="color: red">Tên sách: @Model.Tensach</h3>
+        <p>Mô tả: @Model.Mota</p>
+        <p>Giá bán: <span style="color:red">@Model.Giaban</span></p>
+    </div>
+</div>
+
