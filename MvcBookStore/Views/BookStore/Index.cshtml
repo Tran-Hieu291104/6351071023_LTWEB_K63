@@ -112,15 +112,18 @@
 {
     <div class="templatemo_product_box">
         <a href="@Url.Action("Details", "BookStore", new { id = sach.Masach })">
-            <img alt="@sach.Tensach" src="~/Content/image/@sach.Anhbia" width="200" />
+            <img alt="@sach.Tensach" src="~/Content/image/@sach.Anhbia" style="width:223px; height:113px" />
         </a>
         <div class="product_info">
             <p>@sach.Tensach</p>
             <h3>@sach.Giaban</h3>
-            <div class="buy_now_button"><a href="@Url.Action("Details", "BookStore", new { id = sach.Masach })">Buy Now</a></div>
-            <div class="detail_button"><a href="@Url.Action("Details", "BookStore", new { id = sach.Masach })">Detail</a></div>
+            <div class="button-container">
+                <!-- Flex container for buttons -->
+                <a href="@Url.Action("Details", "BookStore", new { id = sach.Masach })" class="btn btn-success btn-buy">Buy Now</a>
+                <a href="@Url.Action("Details", "BookStore", new { id = sach.Masach })" class="btn btn-primary btn-detail">Detail</a>
+            </div>
         </div>
     </div>
-    <div class="cleaner_with_width"></div>
+    <div class=""></div>
     //sdfk
 }

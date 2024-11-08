@@ -13,13 +13,15 @@
         <div id="templatemo_menu">
             <ul>
                 <li><a href="~/BookStore/Index" class="current">Home</a></li>
-                <li><a href="~/BookStore/SubPage">Search</a></li>
-                <li><a href="~/BookStore/SubPage">Books</a></li>
+                <li>@Html.ActionLink("View Cart", "GioHang", "Giohang")</li>
+                <li>@Html.ActionLink("Login", "Dangnhap", "Nguoidung")</li>
                 <li><a href="~/BookStore/SubPage">New Releases</a></li>
                 <li><a href="~/BookStore/SubPage">Company</a></li>
                 <li><a href="~/BookStore/SubPage">Contact</a></li>
+                <li>@Html.Action("GiohangPartial", "GioHang")</li>
             </ul>
         </div> <!-- end of menu -->
+
 
         <div id="templatemo_header">
             <div id="templatemo_special_offers">

@@ -14,5 +14,13 @@
         <p>Mô tả: @Model.Mota</p>
         <p>Giá bán: <span style="color:red">@Model.Giaban</span></p>
     </div>
+
+</div>
+<div id="Datmua">
+    @*<a href="@Url.Action("ThemGiohang", "GioHang", new {@Model.Masach, Request.Url})">
+        ĐẶT MUA
+    </a>*@
+    <a href="@Url.Action("ThemGiohang", "GioHang", new {@iMasach = @Model.Masach, @strURL = Request.Url.ToString() })"> ĐẶT MUA</a>
+
 </div>
 
