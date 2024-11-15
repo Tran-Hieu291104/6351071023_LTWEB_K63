@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
+using PagedList;
+using PagedList.Mvc;
 namespace MvcBookStore.Controllers
 {
     public class BookStoreController : Controller
@@ -16,12 +19,14 @@ namespace MvcBookStore.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
-            var sachmoi = Laysachmoi(5);
-            return View(sachmoi);
+            int pageSize = 4;
+            int pageNum = (page ?? 1);
+            var sachmoi = Laysachmoi(15);
+            return View(sachmoi.ToPagedList(pageNum, pageSize));
         }
-        
+
 
         public ActionResult SubPage()
         {

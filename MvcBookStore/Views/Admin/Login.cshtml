@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/login.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login-bg">
+        <div class="login-container">
+            <div class="form-title">ĐĂNG NHẬP HỆ THỐNG QUẢN TRỊ</div>
+            <p>Vui lòng nhập User Name và Password:</p>
+            <h6 style="text-align: center; color: red"> @ViewBag.Thongbao</h6>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+
+                <!-- Username input -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+                    @ViewData["Loi1"]
+                </div>
+
+                <!-- Password input -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                    @ViewData["Loi2"]
+
+                </div>
+
+                <!-- Login button -->
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-custom">Login</button>
+                </div>
+
+                <!-- Forgot password link -->
+                <p class="small"><a href="#" class="text-muted">Forgot password?</a></p>
+
+                <!-- Register link -->
+                <p class="small">Don't have an account? <a href="#" class="link-info">Register here</a></p>
+            }
+        </div>
+    </div>
+
+    <!-- Link Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
